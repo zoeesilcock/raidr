@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'bcrypt', '~> 3.1.7'
 gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
+gem 'mini_racer', platforms: :ruby
 gem 'puma', '~> 3.0'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'react_on_rails', '~> 6'

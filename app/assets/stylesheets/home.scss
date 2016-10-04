@@ -1,17 +1,17 @@
-#home {
-  text-align: center;
-  padding: 40px 0;
 
-  h1 {
-    font-size: 64px;
-    margin: 0;
+#signup-form {
+  margin: 0 auto;
+  font-size: 16px;
 
-    .highlight {
-      color: $color-complement-4;
-    }
+  td {
+    padding: 5px;
   }
 
-  p {
-    margin: 0;
+  .footer {
+    text-align: right;
+
+    a {
+      margin-right: 10px;
+    }
   }
 }

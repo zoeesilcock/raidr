@@ -20,4 +20,18 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  home:
+    signup_form:
+      login: "Already a member?"
+      signup: "Sign up"
+  users:
+    new:
+      login: "Login"
+  activerecord:
+      models:
+        user: "User"
+      attributes:
+        user:
+          email: "E-mail"
+          password: "Password"
+          confirm_password: "Confirm password"

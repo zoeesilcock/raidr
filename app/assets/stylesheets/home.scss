@@ -1,0 +1,17 @@
+#home {
+  text-align: center;
+  padding: 40px 0;
+
+  h1 {
+    font-size: 64px;
+    margin: 0;
+
+    .highlight {
+      color: $color-complement-4;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+}

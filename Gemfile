@@ -5,6 +5,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
 gem 'mini_racer', platforms: :ruby
 gem 'puma', '~> 3.0'
+gem 'pundit'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'react_on_rails', '~> 6'
 gem 'sass-rails', '~> 5.0'
@@ -17,10 +18,10 @@ group :development, :test do
 end
 
 group :development do
-  gem 'web-console'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'web-console'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

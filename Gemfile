@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'bcrypt', '~> 3.1.7'
 gem 'jbuilder', '~> 2.5'
+gem 'jquery-rails'
 gem 'mini_racer', platforms: :ruby
 gem 'puma', '~> 3.0'
 gem 'pundit'

@@ -1,25 +1,16 @@
 <%= form_for @user do %>
-  <table id="signup-form">
-    <tr>
-      <td>
-        <%= label_tag(:email) %>
-      </td>
-      <td>
-        <%= text_field_tag(:email, nil, size: 30) %>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <%= label_tag(:password) %>
-      </td>
-      <td>
-        <%= password_field_tag(:password, nil, size: 30) %>
-      </td>
-    </tr>
-    <tr>
-      <td class="footer" colspan="2">
-        <%= submit_tag(t('.login')) %>
-      </td>
-    </tr>
-  </table>
+  <div class="row">
+    <%= label_tag(:email) %>
+    <%= text_field_tag(:email, nil, size: 30, class: 'u-full-width') %>
+  </div>
+  <div class="row">
+    <%= label_tag(:password) %>
+    <%= password_field_tag(:password, nil, size: 30, class: 'u-full-width') %>
+  </div>
+  <div class="row">
+    <div class="eight columns">&nbsp;</div>
+    <div class="four columns text-center">
+      <%= submit_tag(t('.login'), class: 'u-full-width') %>
+    </div>
+  </div>
 <% end %>

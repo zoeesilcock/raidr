@@ -20,6 +20,12 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  layouts:
+    application:
+      title: "RaidR"
+      description: "When do you want to Raid this week?"
+    header:
+      subtitle: "When do you want to Raid this week?"
   home:
     signup_form:
       login: "Already a member?"

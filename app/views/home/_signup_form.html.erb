@@ -1,35 +1,23 @@
 <%= form_tag("/users", method: "post") do %>
-  <table id="signup-form">
-    <tr>
-      <td>
-        <%= label_tag(:email) %>
-      </td>
-      <td>
-        <%= text_field_tag(:email, nil, size: 30) %>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <%= label_tag(:password) %>
-      </td>
-      <td>
-        <%= password_field_tag(:password, nil, size: 30) %>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <%= label_tag(:confirm_password) %>
-      </td>
-      <td>
-        <%= password_field_tag(:confirm_password, nil, size: 30) %>
-      </td>
-      <td>
-    </tr>
-    <tr>
-      <td class="footer" colspan="2">
-        <%= link_to t('.login'), new_users_path %>
-        <%= submit_tag(t('.signup')) %>
-      </td>
-    </tr>
-  </table>
+  <div class="row">
+    <%= label_tag(:email) %>
+    <%= text_field_tag(:email, nil, size: 30, class: 'u-full-width') %>
+  </div>
+  <div class="row">
+    <%= label_tag(:password) %>
+    <%= password_field_tag(:password, nil, size: 30, class: 'u-full-width') %>
+  </div>
+  <div class="row">
+    <%= label_tag(:confirm_password) %>
+    <%= password_field_tag(:confirm_password, nil, size: 30, class: 'u-full-width') %>
+  </div>
+  <div class="row">
+    <div class="four columns">&nbsp;</div>
+    <div class="four columns text-center">
+      <%= link_to t('.login'), new_users_path, class: 'signup-link' %>
+    </div>
+    <div class="four columns text-center">
+      <%= submit_tag(t('.signup'), class: 'u-full-width') %>
+    </div>
+  </div>
 <% end %>

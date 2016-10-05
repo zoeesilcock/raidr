@@ -14,25 +14,29 @@ a, p {
   color: $white;
 }
 
-
 input[type="text"], input[type="password"] {
-  padding: 5px;
   font-size: 16px;
   color: $white;
   background-color: $color-primary-0;
   border: none;
+  border-radius: 0;
   border-bottom: 1px solid $white !important;
 }
 
 input[type="submit"] {
-  padding: 10px;
   font-size: 16px;
   color: $white;
   background-color: $color-primary-0;
+  border-radius: 0;
   border: none;
   cursor: pointer;
 
   &:hover {
     background-color: $color-complement-3;
+    color: $white;
   }
+}
+
+.text-center {
+  text-align: center;
 }

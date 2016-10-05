@@ -1,0 +1,32 @@
+<%= form_for(@user) do |f| %>
+  <div class="row">
+    <%= f.label(:email, class: 'u-pull-left') %>
+    <span class="error">
+      <%= @user.errors[:email].join(', ') %>
+    </span>
+    <%= f.text_field(:email, size: 30, class: 'u-full-width') %>
+  </div>
+  <div class="row">
+    <%= f.label(:password, class: 'u-pull-left') %>
+    <span class="error">
+      <%= @user.errors[:password].join(', ') %>
+    </span>
+    <%= f.password_field(:password, size: 30, class: 'u-full-width') %>
+  </div>
+  <div class="row">
+    <%= f.label(:password_confirmation, class: 'u-pull-left') %>
+    <span class="error">
+      <%= @user.errors[:password_confirmation].join(', ') %>
+    </span>
+    <%= f.password_field(:password_confirmation, size: 30, class: 'u-full-width') %>
+  </div>
+  <div class="row">
+    <div class="four columns">&nbsp;</div>
+    <div class="four columns text-center">
+      <%= link_to t('.login'), new_sessions_path, class: 'signup-link' %>
+    </div>
+    <div class="four columns text-center">
+      <%= submit_tag(t('.signup'), class: 'u-full-width') %>
+    </div>
+  </div>
+<% end %>

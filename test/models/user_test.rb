@@ -2,7 +2,11 @@ require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
   def user_attributes
-    { email: 'test@best.bar', password: 'password123' }
+    {
+      email: 'test@best.bar',
+      password: 'password123',
+      password_confirmation: 'password123'
+    }
   end
 
   test 'it requires an email' do
@@ -18,6 +22,11 @@ class UserTest < ActiveSupport::TestCase
   test 'it requires a password' do
     user = User.new user_attributes.merge(password: nil)
     assert_not user.save, "Saved without a password"
+  end
+
+  test 'the passwords must match' do
+    user = User.new user_attributes.merge(password_confirmation: 'poo')
+    assert_not user.save, "Saved with non matching passwords"
   end
 
   test 'it accepts a gamertag' do

@@ -27,10 +27,11 @@ en:
     header:
       subtitle: "When do you want to Raid this week?"
   home:
-    signup_form:
+  users:
+    form:
       login: "Already a member?"
       signup: "Sign up"
-  users:
+  sessions:
     new:
       login: "Login"
   activerecord:
@@ -40,4 +41,4 @@ en:
         user:
           email: "E-mail"
           password: "Password"
-          confirm_password: "Confirm password"
+          password_confirmation: "Confirm password"

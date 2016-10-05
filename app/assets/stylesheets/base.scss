@@ -37,6 +37,11 @@ input[type="submit"] {
   }
 }
 
+.error {
+  margin-left: 15px;
+  color: $red;
+}
+
 .text-center {
   text-align: center;
 }

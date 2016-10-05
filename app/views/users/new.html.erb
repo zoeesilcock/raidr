@@ -1,16 +1,1 @@
-<%= form_for @user do %>
-  <div class="row">
-    <%= label_tag(:email) %>
-    <%= text_field_tag(:email, nil, size: 30, class: 'u-full-width') %>
-  </div>
-  <div class="row">
-    <%= label_tag(:password) %>
-    <%= password_field_tag(:password, nil, size: 30, class: 'u-full-width') %>
-  </div>
-  <div class="row">
-    <div class="eight columns">&nbsp;</div>
-    <div class="four columns text-center">
-      <%= submit_tag(t('.login'), class: 'u-full-width') %>
-    </div>
-  </div>
-<% end %>
+<%= render 'users/form' %>

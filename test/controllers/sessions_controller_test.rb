@@ -20,4 +20,11 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to root_url
     assert_equal User.first.id, session[:user_id], "Didn't save the user id in the session"
   end
+
+  test "it clears the session on delete" do
+    post sessions_url, params: { user: user_credentials }
+    delete sessions_url
+    assert_redirected_to root_url
+    assert_nil session[:user_id]
+  end
 end

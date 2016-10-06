@@ -41,6 +41,7 @@ en:
         user: "User"
       attributes:
         user:
+          gamertag: "Gamertag"
           email: "E-mail"
           password: "Password"
           password_confirmation: "Confirm password"

@@ -5,7 +5,8 @@ class UserTest < ActiveSupport::TestCase
     {
       email: 'test@best.bar',
       password: 'password123',
-      password_confirmation: 'password123'
+      password_confirmation: 'password123',
+      gamertag: 'carrot_king'
     }
   end
 
@@ -29,10 +30,13 @@ class UserTest < ActiveSupport::TestCase
     assert_not user.save, "Saved with non matching passwords"
   end
 
-  test 'it accepts a gamertag' do
-    gamertag = 'carrot_king'
-    user = User.new user_attributes.merge(gamertag: gamertag)
-    assert user.save, "Saved with a gamertag"
-    assert_equal gamertag, user.gamertag
+  test 'it requires a gamertag' do
+    user = User.new user_attributes.merge(gamertag: nil)
+    assert_not user.save, "Saved without a gamertag"
+  end
+
+  test 'it requires a unique gamertag' do
+    user = User.new user_attributes.merge(gamertag: 'potatoe_user')
+    assert_not user.save, "Saved with an existing gamertag"
   end
 end

@@ -7,6 +7,13 @@
     <%= f.text_field(:email, size: 30, class: 'u-full-width') %>
   </div>
   <div class="row">
+    <%= f.label(:gamertag, class: 'u-pull-left') %>
+    <span class="error">
+      <%= @user.errors[:gamertag].join(', ') %>
+    </span>
+    <%= f.text_field(:gamertag, size: 30, class: 'u-full-width') %>
+  </div>
+  <div class="row">
     <%= f.label(:password, class: 'u-pull-left') %>
     <span class="error">
       <%= @user.errors[:password].join(', ') %>

@@ -26,6 +26,7 @@ en:
       description: "When do you want to Raid this week?"
     header:
       subtitle: "When do you want to Raid this week?"
+    navigation:
       logout: "Logout"
   home:
   users:

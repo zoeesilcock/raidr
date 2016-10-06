@@ -16,6 +16,7 @@
   <body>
     <div class="container">
       <div class="row">
+        <%= render 'layouts/navigation' if user_signed_in? %>
         <%= render 'layouts/header' %>
         <%= yield %>
       </div>

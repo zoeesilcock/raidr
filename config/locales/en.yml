@@ -34,6 +34,7 @@ en:
   sessions:
     new:
       login: "Login"
+      login_failed: "Email or password was incorrect."
   activerecord:
       models:
         user: "User"

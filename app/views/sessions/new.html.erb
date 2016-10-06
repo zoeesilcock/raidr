@@ -1,11 +1,14 @@
-<%= form_tag 'sessions', method: 'post' do |f| %>
+<%= form_for(@user, url: sessions_path, method: 'post') do |f| %>
   <div class="row">
-    <%= label_tag(:email) %>
-    <%= text_field_tag(:email, nil, size: 30, class: 'u-full-width') %>
+    <%= f.label(:email, class: 'u-pull-left') %>
+    <%= f.text_field(:email, size: 30, class: 'u-full-width') %>
   </div>
   <div class="row">
-    <%= label_tag(:password) %>
-    <%= password_field_tag(:password, nil, size: 30, class: 'u-full-width') %>
+    <%= f.label(:password, class: 'u-pull-left') %>
+    <%= f.password_field(:password, size: 30, class: 'u-full-width') %>
+  </div>
+  <div class="error row">
+    <%= @error %>
   </div>
   <div class="row">
     <div class="eight columns">&nbsp;</div>

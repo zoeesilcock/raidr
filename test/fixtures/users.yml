@@ -2,5 +2,5 @@
 
 user:
   email: user@example.com
-  password: potatoes
+  password_digest: <%= default_password_digest %>
   gamertag: potatoe_user

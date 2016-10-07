@@ -2,6 +2,7 @@ ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 require 'helpers/test_password_helper'
+require 'helpers/login_user_helper'
 
 ActiveRecord::FixtureSet.context_class.send :include, TestPasswordHelper
 
@@ -11,4 +12,5 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
   include TestPasswordHelper
+  include LoginUserHelper
 end

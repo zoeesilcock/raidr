@@ -27,6 +27,7 @@ en:
     header:
       subtitle: "When do you want to Raid this week?"
     navigation:
+      home: "Home"
       logout: "Logout"
   home:
     index:

@@ -1,6 +1,11 @@
 <div class="row">
   <div class="user u-pull-right">
-    <%= current_user.gamertag %> - 
-    <%= link_to(t('.logout'), sessions_url, method: :delete)  %>
+    <% if user_signed_in? %>
+      <%= current_user.gamertag %> - 
+      <%= link_to(t('.home'), root_url)  %>
+      <%= link_to(t('.logout'), sessions_url, method: :delete)  %>
+    <% else %>
+      <%= link_to(t('.home'), root_url)  %>
+    <% end %>
   </div>
 </div>

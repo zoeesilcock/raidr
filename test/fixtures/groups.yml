@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: "Destiny Devotees"
+  description: "Glöm inte kladdkakan under raiden."
+  public: false
+
+two:
+  title: "Destiny Sverige"
+  description: "En grupp for svenska spelare, alla är välkomna."
+  public: true

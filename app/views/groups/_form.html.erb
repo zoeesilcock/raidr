@@ -1,0 +1,30 @@
+<%= form_for(@group) do |f| %>
+  <div class="row">
+    <%= f.label(:title, class: 'u-pull-left') %>
+    <span class="error">
+      <%= @group.errors[:title].join(', ') %>
+    </span>
+    <%= f.text_field(:title, size: 30, class: 'u-full-width') %>
+  </div>
+  <div class="row">
+    <%= f.label(:description, class: 'u-pull-left') %>
+    <span class="error">
+      <%= @group.errors[:description].join(', ') %>
+    </span>
+    <%= f.text_area(:description, size: 30, class: 'u-full-width') %>
+  </div>
+  <div class="row">
+    <%= f.label(:public, class: 'u-pull-left') %>
+    <span class="error">
+      <%= @group.errors[:public].join(', ') %>
+    </span>
+    <%= f.check_box(:public) %>
+    <p class="note"><%= t('.public_note') %></p>
+  </div>
+  <div class="row">
+    <div class="six columns">&nbsp;</div>
+    <div class="six columns text-center">
+      <%= submit_tag(submit_button, class: 'u-full-width') %>
+    </div>
+  </div>
+<% end %>

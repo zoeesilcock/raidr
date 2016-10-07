@@ -40,6 +40,13 @@ en:
   groups:
     index:
       groups: "Groups"
+      create_group: "Create new group"
+    new:
+      submit: "Create"
+    edit:
+      submit: "Save"
+    form:
+      public_note: "If you tick this box your group will show on public listing and people can join without permission."
   sessions:
     new:
       login: "Login"
@@ -47,9 +54,14 @@ en:
   activerecord:
       models:
         user: "User"
+        group: "Group"
       attributes:
         user:
           gamertag: "Gamertag"
           email: "E-mail"
           password: "Password"
           password_confirmation: "Confirm password"
+        group:
+          title: "Title"
+          description: "Description"
+          public: "Public"

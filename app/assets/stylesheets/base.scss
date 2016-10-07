@@ -22,7 +22,7 @@ a:hover {
   color: $color-complement-4;
 }
 
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="password"], textarea {
   font-size: 16px;
   color: $white;
   background-color: $color-primary-0;
@@ -45,9 +45,15 @@ input[type="submit"] {
   }
 }
 
-.error {
-  margin-left: 15px;
-  color: $red;
+form {
+  .error {
+    margin-left: 15px;
+    color: $red;
+  }
+
+  .note {
+    font-size: 12px;
+  }
 }
 
 .text-center {

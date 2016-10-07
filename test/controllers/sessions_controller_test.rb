@@ -12,7 +12,7 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
 
   test "it renders the form again with invalid credentials" do
     post sessions_url, params: { user: user_credentials.merge(email: 'wrong') }
-    assert_select '.error.row', 'Email or password was incorrect.'
+    assert_select '.error.row', "Email or password was incorrect."
   end
 
   test "it saves the user ID in the session with valid credentials" do

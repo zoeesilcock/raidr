@@ -1,0 +1,9 @@
+<h1><%= t('.groups') %></h1>
+
+<ul id="groups">
+  <% @groups.each do |group| %>
+    <li>
+      <%= group.title %>
+    </li>
+  <% end %>
+</ul>

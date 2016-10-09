@@ -39,4 +39,11 @@ class UserTest < ActiveSupport::TestCase
     user = User.new user_attributes.merge(gamertag: 'potatoe_user')
     assert_not user.save, "Saved with an existing gamertag"
   end
+
+  test "that it has a current group" do
+    user = User.create user_attributes
+    assert_nil user.current_group
+    user.groups << Group.new(title: "Test group")
+    assert_not_nil user.current_group
+  end
 end

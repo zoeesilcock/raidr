@@ -1,11 +1,17 @@
-<h1><%= t('.groups') %></h1>
+<div id="groups-header" class="row">
+  <div class="six columns">
+    <h1><%= t('.groups') %></h1>
+  </div>
+  <div class="six columns">
+    <%= link_to t('.create_group'), new_group_path, class: 'button button-primary u-full-width' %>
+  </div>
+</div>
 
 <ul id="groups">
   <% @groups.each do |group| %>
     <li>
-      <%= group.title %>
+      <%= link_to group.title, group %>
     </li>
   <% end %>
 </ul>
 
-<%= link_to t('.create_group'), new_group_path %>

@@ -31,17 +31,20 @@ input[type="text"], input[type="password"], textarea {
   border-bottom: 1px solid $white !important;
 }
 
-input[type="submit"] {
+.button, input[type="submit"], input[type="button"] {
   font-size: 16px;
-  color: $white;
-  background-color: $color-primary-0;
   border-radius: 0;
   border: none;
   cursor: pointer;
 
-  &:hover {
-    background-color: $color-complement-3;
+  &.button-primary {
     color: $white;
+    background-color: $color-primary-0;
+
+    &:hover {
+      background-color: $color-complement-3;
+      color: $white;
+    }
   }
 }
 

@@ -41,6 +41,10 @@ en:
     index:
       groups: "Groups"
       create_group: "Create new group"
+    group:
+      edit: "Edit group"
+      leave_group: "Leave group"
+      join_group: "Join group"
     new:
       submit: "Create"
     edit:

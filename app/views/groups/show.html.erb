@@ -2,3 +2,9 @@
 <p><%= @group.description %></p>
 
 <%= link_to t('.edit'), edit_group_path(@group), class: 'button button-primary' %>
+
+<% if user_signed_in? && current_user.groups.include?(@group) %>
+  <%= link_to t('.leave_group'), group_leave_path(@group), class: 'button button-primary' %>
+<% else %>
+  <%= link_to t('.join_group'), group_join_path(@group), class: 'button button-primary' %>
+<% end %>

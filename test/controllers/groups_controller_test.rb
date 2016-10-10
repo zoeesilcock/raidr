@@ -42,4 +42,30 @@ class GroupsControllerTest < ActionDispatch::IntegrationTest
     assert_equal new_title, group.title, "Title didn't change"
     assert_equal new_description, group.description, "Description didn't change"
   end
+
+  test "that a user can join a group" do
+    login_user
+
+    group = Group.last
+    user = User.first
+
+    get group_join_url(group)
+    assert_redirected_to group
+
+    user.reload
+    assert_equal 2, user.groups.length, "Group count is wrong"
+  end
+
+  test "that a user can leave a group" do
+    login_user
+
+    group = Group.first
+    user = User.first
+
+    get group_leave_url(group)
+    assert_redirected_to root_url
+
+    user.reload
+    assert_equal 0, user.groups.length, "Group count is wrong"
+  end
 end

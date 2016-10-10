@@ -35,6 +35,24 @@ class GroupsController < ApplicationController
     end
   end
 
+  def join
+    @group = Group.find params[:group_id]
+
+    current_user.groups << @group
+    current_user.save
+
+    redirect_to @group
+  end
+
+  def leave
+    @group = Group.find params[:group_id]
+
+    current_user.groups.delete @group
+    current_user.save
+
+    redirect_to root_url
+  end
+
   private
 
   def group_params

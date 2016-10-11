@@ -55,6 +55,8 @@ en:
       submit: "Save"
     form:
       public_note: "If you tick this box your group will show on public listing and people can join without permission."
+    show:
+      members: "Members"
   sessions:
     new:
       login: "Login"

@@ -1,6 +1,14 @@
 <h1><%= @group.title %></h1>
 <p><%= @group.description %></p>
 
+<h2><%= t('.members') %></h2>
+<ul>
+<% @group.users.each do |user| %>
+  <li>
+    <%= user.gamertag %>
+  </li>
+<% end %>
+
 <%= link_to t('.edit'), edit_group_path(@group), class: 'button button-primary' %>
 
 <% if user_signed_in? && current_user.groups.include?(@group) %>

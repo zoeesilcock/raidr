@@ -1,5 +1,5 @@
 <% if !user_signed_in? %>
-  <%= render 'users/form' %>
+  <%= render 'users/form', submit: t('.submit') %>
 <% else %>
   <h1><%= t('.welcome') %></h1>
   <p><%= t('.welcome_description_html', groups_path: groups_path) %>

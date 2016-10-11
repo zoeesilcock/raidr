@@ -33,10 +33,14 @@ en:
     index:
       welcome: "Welcome!"
       welcome_description_html: "RaidR is a tool for scheduling raiding parties with your buddies. First up you're going to want to join or create a group. Head over to the <a href=\"%{groups_path}\">public listing</a> of groups and look around."
+      submit: "Sign up"
   users:
+    new:
+      submit: "Sign up"
+    edit:
+      submit: "Save"
     form:
       login: "Already a member?"
-      signup: "Sign up"
   groups:
     index:
       groups: "Groups"

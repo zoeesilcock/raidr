@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161009085657) do
+ActiveRecord::Schema.define(version: 20161013144743) do
 
   create_table "group_memberships", force: :cascade do |t|
     t.integer  "user_id"
@@ -27,6 +27,15 @@ ActiveRecord::Schema.define(version: 20161009085657) do
     t.boolean  "public"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "guardians", force: :cascade do |t|
+    t.integer  "guardian_class"
+    t.boolean  "enabled",        default: true
+    t.integer  "user_id"
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.index ["user_id"], name: "index_guardians_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

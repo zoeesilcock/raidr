@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  guardian_class: 0
+  enabled: 1
+  user_id: 1
+
+two:
+  guardian_class: 1
+  enabled: 1
+  user_id: 1
+
+three:
+  guardian_class: 2
+  enabled: 1
+  user_id: 1

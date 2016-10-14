@@ -1,6 +1,10 @@
 class GroupsController < ApplicationController
   def show
     @group = Group.find params[:id]
+
+    if current_user.guardians.length == 0
+      add_hint I18n.t('hints.no_guardians_html', profile_path: profile_path)
+    end
   end
 
   def index

@@ -6,6 +6,7 @@ class GroupsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "that it gets show" do
+    login_user
     get group_url(Group.first)
     assert_response :success
   end

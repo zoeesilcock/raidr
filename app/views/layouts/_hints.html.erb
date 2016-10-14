@@ -1,0 +1,10 @@
+<% if @hints %>
+  <div id="hints">
+    <h2><%= t('.hints') %></h2>
+    <ul>
+      <% @hints.each do |hint| %>
+        <li><%= raw hint %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

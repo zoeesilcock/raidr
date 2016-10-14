@@ -14,4 +14,14 @@ class GroupsTest < ActionDispatch::IntegrationTest
       assert_not_includes element.text, 'Destiny Devotees', "Private group shown in list"
     end
   end
+
+  test "that it links to the user profile when the user has no guardians" do
+    login_user 'scrub@example.com'
+
+    get group_url(Group.first)
+
+    assert_select '#hints a' do |link|
+      assert_equal profile_path, link.attr('href').value
+    end
+  end
 end

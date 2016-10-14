@@ -5,3 +5,9 @@ user:
   email: user@example.com
   password_digest: <%= default_password_digest %>
   gamertag: potatoe_user
+
+fresh_user:
+  id: 2
+  email: scrub@example.com
+  password_digest: <%= default_password_digest %>
+  gamertag: scrub_user

@@ -29,6 +29,8 @@ en:
     navigation:
       home: "Home"
       logout: "Logout"
+    hints:
+      hints: "Hints"
   home:
     index:
       welcome: "Welcome!"
@@ -61,6 +63,8 @@ en:
     new:
       login: "Login"
       login_failed: "Email or password was incorrect."
+  hints:
+    no_guardians_html: "You haven't got any guardians yet, head over to your <a href=\"%{profile_path}\">profile page</a> and add your guardians."
   activerecord:
       models:
         user: "User"

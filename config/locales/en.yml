@@ -40,6 +40,7 @@ en:
     new:
       submit: "Sign up"
     show:
+      edit: "Edit profile"
       guardians: "Guardians"
       new_guardian: "New guardian"
       add_guardian: "Add guardian"

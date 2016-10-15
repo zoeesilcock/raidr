@@ -1,7 +1,11 @@
-<h1><%= current_user.gamertag %></h1>
-<p><%= current_user.email %></p>
+<div class="row">
+  <div class="six columns">
+    <h1><%= current_user.gamertag %></h1>
+    <p><%= current_user.email %></p>
 
-<%= link_to t('.edit'), profile_edit_path, class: 'button button-primary' %>
+    <%= link_to t('.edit'), profile_edit_path, class: 'button button-primary u-full-width' %>
+  </div>
+</div>
 
 <div class="row">
   <div class="six columns">
@@ -20,7 +24,7 @@
     <%= form_for(@guardian) do |f| %>
       <%= f.label(:guardian_class, class: 'u-pull-left') %>
       <%= f.select(:guardian_class, Guardian.guardian_classes.keys.map {|key| [key.humanize, key]}, {}, class: 'u-full-width') %>
-      <%= submit_tag(t('.add_guardian'), class: 'u-full-width button button-primary') %>
+      <%= submit_tag(t('.add_guardian'), class: 'button button-primary u-full-width') %>
     <% end %>
   </div>
 </div>

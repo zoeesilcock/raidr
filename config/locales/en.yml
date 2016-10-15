@@ -39,6 +39,10 @@ en:
   users:
     new:
       submit: "Sign up"
+    show:
+      guardians: "Guardians"
+      new_guardian: "New guardian"
+      add_guardian: "Add guardian"
     edit:
       submit: "Save"
     form:
@@ -69,6 +73,7 @@ en:
       models:
         user: "User"
         group: "Group"
+        guardian: "Guardian"
       attributes:
         user:
           gamertag: "Gamertag"
@@ -79,3 +84,6 @@ en:
           title: "Title"
           description: "Description"
           public: "Public"
+        guardian:
+          guardian_class: "Class"
+          enabled: "Enabled"

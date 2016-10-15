@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @guardian = Guardian.new
   end
 
   def create

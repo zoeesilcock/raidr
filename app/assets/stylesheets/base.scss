@@ -22,7 +22,7 @@ a:hover {
   color: $color-complement-4;
 }
 
-input[type="text"], input[type="password"], textarea {
+input[type="text"], input[type="password"], textarea, select {
   font-size: 16px;
   color: $white;
   background-color: $color-primary-0;

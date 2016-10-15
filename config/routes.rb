@@ -3,11 +3,15 @@ Rails.application.routes.draw do
   resource :users, only: [:new, :create, :update]
   get '/profile', to: 'users#show'
   get '/profile/edit', to: 'users#edit'
+
   resource :sessions, only: [:new, :create, :destroy]
+
   resources :groups do
     get :join
     get :leave
   end
+
+  resources :guardians, only: [:create, :destroy]
 
   get 'home/index'
   root 'home#index'

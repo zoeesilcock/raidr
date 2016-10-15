@@ -2,3 +2,25 @@
 <p><%= current_user.email %></p>
 
 <%= link_to t('.edit'), profile_edit_path, class: 'button button-primary' %>
+
+<div class="row">
+  <div class="six columns">
+    <h2><%= t('.guardians') %></h2>
+    <ul>
+      <% current_user.guardians.each do |guardian| %>
+        <li>
+          <%= guardian.guardian_class.humanize %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="six columns">
+    <h2><%= t('.new_guardian') %></h2>
+    <%= form_for(@guardian) do |f| %>
+      <%= f.label(:guardian_class, class: 'u-pull-left') %>
+      <%= f.select(:guardian_class, Guardian.guardian_classes.keys.map {|key| [key.humanize, key]}, {}, class: 'u-full-width') %>
+      <%= submit_tag(t('.add_guardian'), class: 'u-full-width button button-primary') %>
+    <% end %>
+  </div>
+</div>

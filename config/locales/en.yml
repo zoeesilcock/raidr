@@ -75,6 +75,7 @@ en:
         user: "User"
         group: "Group"
         guardian: "Guardian"
+        answer: "Answer"
       attributes:
         user:
           gamertag: "Gamertag"
@@ -88,3 +89,5 @@ en:
         guardian:
           guardian_class: "Class"
           enabled: "Enabled"
+        answer:
+          available: "Available"

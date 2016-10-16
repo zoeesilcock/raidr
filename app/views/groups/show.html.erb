@@ -1,15 +1,16 @@
 <h1><%= @group.title %></h1>
 <p><%= @group.description %></p>
 
+<%= link_to t('.edit'), edit_group_path(@group), class: 'button button-primary' %>
+
 <h2><%= t('.members') %></h2>
 <ul>
-<% @group.users.each do |user| %>
-  <li>
-    <%= user.gamertag %>
-  </li>
-<% end %>
-
-<%= link_to t('.edit'), edit_group_path(@group), class: 'button button-primary' %>
+  <% @group.users.each do |user| %>
+    <li>
+      <%= user.gamertag %>
+    </li>
+  <% end %>
+</ul>
 
 <% if user_signed_in? && current_user.groups.include?(@group) %>
   <%= link_to t('.leave_group'), group_leave_path(@group), class: 'button button-primary' %>

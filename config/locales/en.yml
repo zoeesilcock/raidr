@@ -28,6 +28,7 @@ en:
       subtitle: "When do you want to Raid this week?"
     navigation:
       home: "Home"
+      groups: "Groups"
       logout: "Logout"
     hints:
       hints: "Hints"
@@ -52,8 +53,9 @@ en:
     index:
       groups: "Groups"
       create_group: "Create new group"
-    group:
+    show:
       edit: "Edit group"
+      members: "Members"
       leave_group: "Leave group"
       join_group: "Join group"
     new:
@@ -62,8 +64,6 @@ en:
       submit: "Save"
     form:
       public_note: "If you tick this box your group will show on public listing and people can join without permission."
-    show:
-      members: "Members"
   sessions:
     new:
       login: "Login"

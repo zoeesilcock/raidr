@@ -8,12 +8,13 @@
 </div>
 
 <div class="row">
-  <div class="six columns">
+  <div id="guardians" class="six columns">
     <h2><%= t('.guardians') %></h2>
     <ul>
       <% current_user.guardians.each do |guardian| %>
-        <li>
+        <li class="<%= 'enabled' if guardian.enabled %>">
           <%= guardian.guardian_class.humanize %>
+          <%= link_to guardian.enabled ? t('.disable') : t('enable'), guardian_toggle_path(guardian), class: 'button button-primary button-small' %>
         </li>
       <% end %>
     </ul>

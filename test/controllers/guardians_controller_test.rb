@@ -16,4 +16,15 @@ class GuardiansControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to profile_url
   end
+
+  test "that it can enable and disable a guardian" do
+    guardian = Guardian.first
+
+    get guardian_toggle_url(guardian)
+    assert_equal false, guardian.reload.enabled
+    get guardian_toggle_url(guardian)
+    assert_equal true, guardian.reload.enabled
+
+    assert_redirected_to profile_url
+  end
 end

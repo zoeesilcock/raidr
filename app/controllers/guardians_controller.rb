@@ -9,6 +9,12 @@ class GuardiansController < ApplicationController
     end
   end
 
+  def toggle
+    guardian = Guardian.find params[:guardian_id]
+    guardian.update_attributes(enabled: !guardian.enabled)
+    redirect_to profile_url
+  end
+
   private
 
   def guardian_params

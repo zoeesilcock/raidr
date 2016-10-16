@@ -11,7 +11,9 @@ Rails.application.routes.draw do
     get :leave
   end
 
-  resources :guardians, only: [:create, :destroy]
+  resources :guardians, only: [:create, :destroy] do
+    get :toggle
+  end
 
   get 'home/index'
   root 'home#index'

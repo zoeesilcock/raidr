@@ -1,0 +1,20 @@
+#guardians {
+  ul {
+    list-style: none;
+  }
+
+  li {
+    padding: 5px;
+    margin: 0;
+
+    &.enabled {
+      font-weight: bold;
+      background-color: $color-complement-0;
+    }
+
+    .button {
+      float: right;
+      font-size: 12px;
+    }
+  }
+}

@@ -26,6 +26,11 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to root_url
   end
 
+  test "that it renders the form if the user is invalid" do
+    post users_url, params: { user: user_attributes.merge(email: nil) }
+    assert_template :new
+  end
+
   test "that it logs the user in" do
     post users_url, params: { user: user_attributes }
     assert_not_nil session[:user_id]
@@ -46,5 +51,11 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     user.reload
     assert_equal new_gamer_tag, user.gamertag
     assert_redirected_to profile_url
+  end
+
+  test "that it renders the user form if the user is invalid" do
+    login_user
+    put users_path, params: { user: { gamertag: nil } }
+    assert_template :edit
   end
 end

@@ -27,6 +27,11 @@ class GroupsControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test "that it renders the form if the group is invalid" do
+    post groups_url, params: { group: group_attributes.merge(title: nil) }
+    assert_template :new
+  end
+
   test "that it gets edit" do
     get edit_group_url(Group.first)
     assert_response :success
@@ -42,6 +47,12 @@ class GroupsControllerTest < ActionDispatch::IntegrationTest
 
     assert_equal new_title, group.title, "Title didn't change"
     assert_equal new_description, group.description, "Description didn't change"
+  end
+
+  test "that it renders the edit form if the group is invalid" do
+    group = Group.first
+    put group_url(group), params: { group: { title: nil } }
+    assert_template :edit
   end
 
   test "that a user can join a group" do

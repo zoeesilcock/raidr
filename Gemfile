@@ -14,11 +14,13 @@ gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'guard'
+  gem 'guard-minitest'
+  gem 'rails-controller-testing'
+  gem 'simplecov', require: false
 end
 
 group :development do
-  gem 'guard'
-  gem 'guard-minitest'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
